@@ -1,21 +1,230 @@
-Testing website
-<h3>Original Audio</h3>
-<audio controls src="Elektronomia Comparisons/Elektronomia.mp3"></audio>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Audio examples and model comparisons for CHIME, a lightweight model for melody extraction.">
+  <title>CHIME — Audio Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" aria-label="CHIME home">
+      <span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Tristan George George</span>
+    </a>
+ 
+  </header>
 
-<h3>Predicted Melody Contour: HarmoLite</h3>
-<audio controls src="Elektronomia Comparisons/harmolite.mp3"></audio>
+  <main id="top">
+    <section class="maintitle" id="about">
+      <h1>CHIME: A Constrained Harmonic Inductive Bias for Melody Extraction</h1>
+      <p class="maintitle-copy">
+        This website serves as the demo page for the CHIME model. Below are a few demonstrations, where we display an excerpt of a song, along with
+        the synthesized sinusoid audio representing CHIME's predicted melody contours. For comparison, we also synthesize and present the predicted melody contours of
+        competing methods. This page consists of three short song demos, along with an entire song demo presented at the bottom of this page. The songs selected are
+        copyright-free, or are allowed for public use by the creators of the song.
+      </p>
+      
+    </section>
 
-<h3>Predicted Melody Contour: FTANet</h3>
-<audio controls src="Elektronomia Comparisons/fta.mp3"></audio>
+    <section class="demo-section" id="examples">
+      <div class="section-heading">
+        <div id = "audioheader">
+          <h2>Audio comparisons</h2>
+          <p>
+          Each column of songs contains the original and synthesized sinusoidal audios from competing models for a given song. Some audio samples by competing models contain a large amount of audible jitter, or sounds that
+          disturb what is otherwise a smooth melody contour. This is due to how these models can rapidly swap between voiced and unvoiced predictions, resulting in temporally incoherent
+          predictions.
+         </p>
+        </div>
+        
+      </div>
 
-<h3>Predicted Melody Contour: TONet</h3>
-<audio controls src="Elektronomia Comparisons/tonet.mp3"></audio>
+ 
 
-<h3>Predicted Melody Contour: MTU</h3>
-<audio controls src="Elektronomia Comparisons/mtu.mp3"></audio>
+      <div class="sample-grid">
+        <article class="sample-card">
+          <header class="sample-header">
+            <h3>Sky High</h3>
+            <p>Elektronomia · Progressive house</p>
+          </header>
+          <div class="audio-list">
+            <div class="audio-item audio-source">
+              <div class="audio-label"><span>Original audio</span></div>
+              <audio controls preload="metadata" src="Sky High Elektronomia Synthesized Model Predictions/Original Elektronomia.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-ours">
+              <div class="audio-label"><span>CHIME</span></div>
+              <audio controls preload="metadata" src="Sky High Elektronomia Synthesized Model Predictions/CHIME Elektronomia.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-ours">
+              <div class="audio-label"><span>CHIME + original</span></div>
+              <audio controls preload="metadata" src="Sky High Elektronomia Synthesized Model Predictions/CHIME and Original Elektronomia.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MTU</span></div>
+              <audio controls preload="metadata" src="Sky High Elektronomia Synthesized Model Predictions/MTU Elektronomia.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>TONet</span></div>
+              <audio controls preload="metadata" src="Sky High Elektronomia Synthesized Model Predictions/TONet Elektronomia.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>FTANet</span></div>
+              <audio controls preload="metadata" src="Sky High Elektronomia Synthesized Model Predictions/FTANet Elektronomia.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MSNet</span></div>
+              <audio controls preload="metadata" src="Sky High Elektronomia Synthesized Model Predictions/MSNet Elektronomia.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MCDNN</span></div>
+              <audio controls preload="metadata" src="Sky High Elektronomia Synthesized Model Predictions/MCDNN Elektronomia.mp3">Your browser does not support audio.</audio>
+            </div>
 
-<h3>Predicted Melody Contour: MSNet</h3>
-<audio controls src="Elektronomia Comparisons/msnet.mp3"></audio>
+          </div>
+        </article>
 
-<h3>Predicted Melody Contour: MCDNN</h3>
-<audio controls src="Elektronomia Comparisons/mcdnn.mp3"></audio>
+
+        <article class="sample-card">
+          <header class="sample-header">
+            <h3>Lace</h3>
+            <p>Silksong · Video Game Soundtrack</p>
+          </header>
+          <div class="audio-list">
+            <div class="audio-item audio-source">
+              <div class="audio-label"><span>Original audio</span></div>
+              <audio controls preload="metadata" src="Silksong Lace Synthesized Model Predictions/Original Silksong Lace.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-ours">
+              <div class="audio-label"><span>CHIME</span></div>
+              <audio controls preload="metadata" src="Silksong Lace Synthesized Model Predictions/CHIME Silksong Lace.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-ours">
+              <div class="audio-label"><span>CHIME + original</span></div>
+              <audio controls preload="metadata" src="Silksong Lace Synthesized Model Predictions/CHIME and Original Silksong Lace.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MTU</span></div>
+              <audio controls preload="metadata" src="Silksong Lace Synthesized Model Predictions/MTU Silksong Lace.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>TONet</span></div>
+              <audio controls preload="metadata" src="Silksong Lace Synthesized Model Predictions/TONet Silksong Lace.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>FTANet</span></div>
+              <audio controls preload="metadata" src="Silksong Lace Synthesized Model Predictions/FTANet Silksong Lace.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MSNet</span></div>
+              <audio controls preload="metadata" src="Silksong Lace Synthesized Model Predictions/MSNet Silksong Lace.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MCDNN</span></div>
+              <audio controls preload="metadata" src="Silksong Lace Synthesized Model Predictions/MCDNN Silksong Lace.mp3">Your browser does not support audio.</audio>
+            </div>
+
+          </div>
+        </article>
+
+        <article class="sample-card">
+          <header class="sample-header">
+            <h3>Gran Vals</h3>
+            <p>Francisco Tárrega · Classical Guitar</p>
+          </header>
+          <div class="audio-list">
+           <div class="audio-item audio-source">
+              <div class="audio-label"><span>Original audio</span></div>
+              <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/Original Gran Vals.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-ours">
+              <div class="audio-label"><span>CHIME</span></div>
+              <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/CHIME Gran Vals.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-ours">
+              <div class="audio-label"><span>CHIME + original</span></div>
+              <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/CHIME and Original Gran Vals.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MTU</span></div>
+              <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/MTU Gran Vals.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>TONet</span></div>
+              <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/TONet Gran Vals.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>FTANet</span></div>
+              <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/FTANet Gran Vals.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MSNet</span></div>
+              <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/MSNet Gran Vals.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MCDNN</span></div>
+              <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/MCDNN Gran Vals.mp3">Your browser does not support audio.</audio>
+            </div>
+
+          </div>
+        </article>
+
+
+
+
+        <article class="special-card">
+          <header class="sample-header">
+            <h3>On & On</h3>
+            <p>Cartoon, Jéja (feat. Daniel Levi) · Electronic Pop</p>
+          </header>
+          <div class="audio-list">
+            <div class="audio-item audio-source">
+              <div class="audio-label"><span>Original audio</span></div>
+              <audio controls preload="metadata" src="On & On Synthesized Model Predictions/Original On & On.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-ours">
+              <div class="audio-label"><span>CHIME</span></div>
+              <audio controls preload="metadata" src="On & On Synthesized Model Predictions/CHIME On & On.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-ours">
+              <div class="audio-label"><span>CHIME + original</span></div>
+              <audio controls preload="metadata" src="On & On Synthesized Model Predictions/CHIME and Original On & On.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MTU</span></div>
+              <audio controls preload="metadata" src="On & On Synthesized Model Predictions/MTU On & On.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>TONet</span></div>
+              <audio controls preload="metadata" src="On & On Synthesized Model Predictions/TONet On & On.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>FTANet</span></div>
+              <audio controls preload="metadata" src="On & On Synthesized Model Predictions/FTANet On & On.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MSNet</span></div>
+              <audio controls preload="metadata" src="On & On Synthesized Model Predictions/MSNet On & On.mp3">Your browser does not support audio.</audio>
+            </div>
+            <div class="audio-item audio-baseline">
+              <div class="audio-label"><span>MCDNN</span></div>
+              <audio controls preload="metadata" src="On & On Synthesized Model Predictions/MCDNN On & On.mp3">Your browser does not support audio.</audio>
+            </div>
+          </div>
+        </article>
+
+
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <span>Tristan George George</span>
+    <span>CHIME · Audio demo</span>
+  </footer>
+</body>
+</html>
