@@ -36,6 +36,10 @@
           Each column of songs contains the original and synthesized sinusoidal audios from competing models for a given song. Some audio samples by competing models contain a large amount of audible jitter, or sounds that
           disturb what is otherwise a smooth melody contour. This is due to how these models can rapidly swap between voiced and unvoiced predictions, resulting in temporally incoherent
           predictions.
+          Some additional notes:
+          - We recommend wearing earphones/headphones when listening to the audio samples, especially the "CHIME + Original" samples, as we play CHIME in one channel and the ground truth song in the other.
+          - Avoid playing two songs at the same time
+          - You may need to raise the volume to hear the audio properly. Remember to decrease your volume afterwards.
          </p>
         </div>
         
@@ -164,7 +168,7 @@
               <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/MSNet.mp3">Your browser does not support audio.</audio>
             </div>
             <div class="audio-item audio-baseline">
-              <div class="audio-label"><span>MCDNN</span></div>
+              <div class="audio-label"><span>MCDNN - The entire track was predicted as unvoiced, so there is no sound</span></div>
               <audio controls preload="metadata" src="Gran Vals Synthesized Model Predictions/MCDNN.mp3">Your browser does not support audio.</audio>
             </div>
 
